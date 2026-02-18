@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "onilib:crumb_animator"
+    }
+  ],
+  "result": {
+    "count": 18,
+    "id": "onilib:crumbium"
+  }
+}

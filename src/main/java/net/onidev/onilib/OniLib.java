@@ -1,5 +1,10 @@
 package net.onidev.onilib;
 
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.onidev.onilib.block.ModBlocks;
+import net.onidev.onilib.item.ModCreativeModeTabs;
+import net.onidev.onilib.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -16,8 +21,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(OniLib.MOD_ID)
-public class OniLib
-{
+public class OniLib {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "onilib";
 
@@ -26,13 +30,17 @@ public class OniLib
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public OniLib(IEventBus modEventBus, ModContainer modContainer)
-    {
+    public OniLib(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (OniLib) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -41,21 +49,27 @@ public class OniLib
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
-    private void commonSetup(FMLCommonSetupEvent event)
-    {
+    private void commonSetup(FMLCommonSetupEvent event) {
 
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.LAPIS_DUST);
+            event.accept(ModItems.SPIDER_EGGS);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.CRUMB_RADIO);
+            event.accept(ModBlocks.EVIL_CRUMB_RADIO);
+            event.accept(ModBlocks.CRUMB_ANIMATOR);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
 
     }
 }

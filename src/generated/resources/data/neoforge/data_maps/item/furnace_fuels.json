@@ -1,0 +1,10 @@
+{
+  "values": {
+    "onilib:essence_of_crumb_doubter": {
+      "burn_time": 1200
+    },
+    "onilib:light_of_crumb": {
+      "burn_time": 2400
+    }
+  }
+}

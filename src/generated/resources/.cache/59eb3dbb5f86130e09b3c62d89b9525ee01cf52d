@@ -1,0 +1,7 @@
+// 1.21.1	2026-02-02T15:29:24.9387494	Loot Tables
+f70126f25cd494625feda0b7fcbb2aa9d800e717 data/onilib/loot_table/blocks/block_of_crumbium.json
+17743ef8d4f651ee98ff2a1911cafd61bd895fc1 data/onilib/loot_table/blocks/crumb_animator.json
+f7821046be08ee2fd16210127fa9fd30001a60fa data/onilib/loot_table/blocks/crumb_ore.json
+58ad472fe555a41e875c5abe18537b319b254de2 data/onilib/loot_table/blocks/crumb_radio.json
+7aaa985295b1b00ce9ffc15eff102e2992e9cef3 data/onilib/loot_table/blocks/deepslate_crumb_ore.json
+bb3693eb294394e9ea3b89f7f2e7d2b83f423e80 data/onilib/loot_table/blocks/evil_crumb_radio.json
