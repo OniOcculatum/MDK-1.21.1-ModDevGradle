@@ -26,5 +26,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.CRUMB_DRINK.get())
                 .add(Items.BREAD);
 
+        tag(ModTags.Items.CRUMB_FOOD)
+            .add(ModItems.ESSENCE_OF_CRUMB_DOUBTER.get())
+            .add(ModItems.LIGHT_OF_CRUMB.get());
     }
 }

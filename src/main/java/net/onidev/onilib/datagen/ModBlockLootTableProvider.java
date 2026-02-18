@@ -27,13 +27,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        // dropSelf is going to be used in 90% of cases.
         dropSelf(ModBlocks.CRUMB_RADIO.get());
         dropSelf(ModBlocks.EVIL_CRUMB_RADIO.get());
         dropSelf(ModBlocks.CRUMB_ANIMATOR.get());
         dropSelf(ModBlocks.BLOCK_OF_CRUMBIUM.get());
 
+        // createOreDrop takes one item as the ore block, and one item as the ore item.
         add(ModBlocks.CRUMB_ORE.get(),
                 block -> createOreDrop(ModBlocks.CRUMB_ORE.get(), ModItems.RAW_CRUMBIUM.get()));
+
+        // createMultipleOreDrops is a custom method for copper-ore-like behavior.
         add(ModBlocks.DEEPSLATE_CRUMB_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_CRUMB_ORE.get(), ModItems.RAW_CRUMBIUM.get(), 2, 5));
 

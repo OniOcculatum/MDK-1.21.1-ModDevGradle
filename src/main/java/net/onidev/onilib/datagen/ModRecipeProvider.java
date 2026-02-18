@@ -20,20 +20,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
-        List<ItemLike> CRUMB_SMELTABLES = List.of(ModItems.RAW_CRUMBIUM,
-                ModBlocks.CRUMB_ORE, ModBlocks.DEEPSLATE_CRUMB_ORE);
+        // Tagging items for auto-recipes later.
+        List<ItemLike> CRUMB_SMELTABLES = List.of(
+                ModItems.RAW_CRUMBIUM,
+                ModBlocks.CRUMB_ORE,
+                ModBlocks.DEEPSLATE_CRUMB_ORE);
 
+        // An example shaped recipe.
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CRUMBIUM.get())
                 .pattern("BBB")
                 .pattern("BBB")
                 .pattern("BBB")
                 .define('B', ModItems.CRUMBIUM.get())
-                .unlockedBy("has_crumbium", has(ModItems.CRUMBIUM)).save(recipeOutput);
+                .unlockedBy("has_crumbium", has(ModItems.CRUMBIUM))
+                .save(recipeOutput);
 
+        // An example shapeless recipe.
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 9)
                 .requires(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-                .unlockedBy("has_crumbium_block", has(ModBlocks.BLOCK_OF_CRUMBIUM)).save(recipeOutput);
+                .unlockedBy("has_crumbium_block", has(ModBlocks.BLOCK_OF_CRUMBIUM))
+                .save(recipeOutput);
 
+        // An example shapeless custom recipe.
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 18)
                 .requires(ModBlocks.CRUMB_ANIMATOR.get())
                 .unlockedBy("has_crumb_animator", has(ModBlocks.CRUMB_ANIMATOR))
