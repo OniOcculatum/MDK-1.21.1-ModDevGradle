@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "onilib:deepslate_casing"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "onilib:deepslate_alloy"
+  }
+}

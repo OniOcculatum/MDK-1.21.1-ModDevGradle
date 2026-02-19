@@ -1,5 +1,6 @@
 package net.onidev.onilib.datagen;
 
+import net.neoforged.fml.common.Mod;
 import net.onidev.onilib.OniLib;
 import net.onidev.onilib.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
@@ -20,17 +21,34 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 //
 //        // Use the tag function with BlockTags.<tag> to quickly and easily tag a large number of blocks.
-//        tag(BlockTags.MINEABLE_WITH_PICKAXE)
-//                .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-//                .add(ModBlocks.CRUMB_ORE.get())
-//                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
-//
-//        tag(BlockTags.NEEDS_STONE_TOOL)
-//            .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-//            .add(ModBlocks.CRUMB_ORE.get());
-//
-//        tag(BlockTags.NEEDS_IRON_TOOL)
-//                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.DEEPSLATE_CASING.get())
+                .add(ModBlocks.DEEPSLATE_CASING_STAIRS.get())
+                .add(ModBlocks.DEEPSLATE_CASING_SLAB.get())
+                .add(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_BUTTON.get())
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_DOOR.get())
+                .add(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
 
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.DEEPSLATE_CASING.get())
+                .add(ModBlocks.DEEPSLATE_CASING_STAIRS.get())
+                .add(ModBlocks.DEEPSLATE_CASING_SLAB.get())
+                .add(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_BUTTON.get())
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_DOOR.get())
+                .add(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get())
+                .add(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.DEEPSLATE_CASING_WALL.get());
     }
 }

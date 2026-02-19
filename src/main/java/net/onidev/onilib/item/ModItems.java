@@ -28,6 +28,16 @@ public class ModItems {
             () -> new Item(new Item.Properties())
     );
 
+    public static final DeferredItem<Item> PEPSI = ITEMS.register(
+            "pepsi",
+            () -> new Item(new Item.Properties())
+    );
+
+    public static final DeferredItem<Item> DEEPSLATE_ALLOY = ITEMS.register(
+            "deepslate_alloy",
+            () -> new Item(new Item.Properties())
+    );
+
 //    public static final DeferredItem<Item> CRUMB_RESHAPER = ITEMS.register(
 //            "crumb_reshaper",
 //            () -> new CrumbReshaper(new Item.Properties().durability(32))

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "onilib:block/deepslate_casing_pressure_plate"
+    },
+    "powered=true": {
+      "model": "onilib:block/deepslate_casing_pressure_plate_down"
+    }
+  }
+}

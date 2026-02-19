@@ -1,0 +1,13 @@
+{
+  "values": [
+    "onilib:deepslate_casing",
+    "onilib:deepslate_casing_stairs",
+    "onilib:deepslate_casing_slab",
+    "onilib:deepslate_casing_pressure_plate",
+    "onilib:deepslate_casing_button",
+    "onilib:deepslate_casing_fence",
+    "onilib:deepslate_casing_fence_gate",
+    "onilib:deepslate_casing_door",
+    "onilib:deepslate_casing_trapdoor"
+  ]
+}

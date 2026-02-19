@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "onilib:block/deepslate_casing_slab"
+    },
+    "type=double": {
+      "model": "onilib:block/deepslate_casing"
+    },
+    "type=top": {
+      "model": "onilib:block/deepslate_casing_slab_top"
+    }
+  }
+}

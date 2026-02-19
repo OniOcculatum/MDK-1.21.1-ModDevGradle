@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "deepslate_casing",
+  "key": {
+    "#": {
+      "item": "onilib:deepslate_alloy"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "onilib:deepslate_casing_stairs"
+  }
+}

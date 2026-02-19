@@ -1,1 +1,5 @@
-// 1.21.1	2026-02-18T18:43:36.0138166	Tags for minecraft:block mod id onilib
+// 1.21.1	2026-02-18T21:59:06.9951294	Tags for minecraft:block mod id onilib
+7f8114751836dee1f3dc18ca0124ad8b2c33792e data/minecraft/tags/block/fences.json
+f5443f5d43c29cbf43705ceff72e6debed03752b data/minecraft/tags/block/mineable/pickaxe.json
+f5443f5d43c29cbf43705ceff72e6debed03752b data/minecraft/tags/block/needs_iron_tool.json
+f0ff4290535f29610dc44d55ec1fc1fee85695fb data/minecraft/tags/block/walls.json

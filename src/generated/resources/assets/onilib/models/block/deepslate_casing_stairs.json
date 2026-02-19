@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "onilib:block/deepslate_casing",
+    "side": "onilib:block/deepslate_casing",
+    "top": "onilib:block/deepslate_casing"
+  }
+}

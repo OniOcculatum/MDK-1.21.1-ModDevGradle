@@ -1,1 +1,12 @@
-// 1.21.1	2026-02-18T18:43:36.0159018	Loot Tables
+// 1.21.1	2026-02-18T22:08:07.868489	Loot Tables
+2e1a4c831acb0377789e0be3dc79699701c5b5df data/onilib/loot_table/blocks/deepslate_casing.json
+8746dc9fdca1861af395d131faf78bdad5bfee3d data/onilib/loot_table/blocks/deepslate_casing_button.json
+82c6174dc83fc6d7c170c68bdc9bf2273897269f data/onilib/loot_table/blocks/deepslate_casing_door.json
+8a6e69742e55773873371327de7c22fabf41bc0d data/onilib/loot_table/blocks/deepslate_casing_fence.json
+a16a97bd26a8e12ebf6f39b18c4e420b456a2bcb data/onilib/loot_table/blocks/deepslate_casing_fence_gate.json
+8ac1af1a79b54f1f46243f158a6da17fe3d517e7 data/onilib/loot_table/blocks/deepslate_casing_pressure_plate.json
+003014aea9b0e597bd7358b700b9110ce03f4e84 data/onilib/loot_table/blocks/deepslate_casing_slab.json
+8eccc42712c9eb2a7b794f98115d0e7b71e8d70b data/onilib/loot_table/blocks/deepslate_casing_stairs.json
+495cb82ea297dbbcb0c3489d730dcaa1f29e96fe data/onilib/loot_table/blocks/deepslate_casing_trapdoor.json
+d0839e72fb0c3ff4e2b218cd9af1bce2e00ffc6d data/onilib/loot_table/blocks/deepslate_casing_wall.json
+283056fad8e0f24d6b8f7ee276758eb6f1e6ee0b data/onilib/loot_table/blocks/reconsider_block.json

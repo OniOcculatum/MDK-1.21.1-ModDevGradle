@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "deepslate_casing",
+  "ingredients": [
+    {
+      "item": "onilib:deepslate_alloy"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "onilib:deepslate_casing_button"
+  }
+}

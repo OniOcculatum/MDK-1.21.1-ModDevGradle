@@ -1,5 +1,21 @@
 {
   "item.onilib.lapis_dust": "Lapis Dust",
-  "item.onilib.spider_eggs": "Spider Eggs"
+  "item.onilib.spider_eggs": "Spider Eggs",
+  "item.onilib.pepsi": "Pepsi",
+  "item.onilib.deepslate_alloy": "Deepslate Alloy",
 
+  "block.onilib.deepslate_casing": "Deepslate Casing",
+  "block.onilib.deepslate_casing_slab": "Deepslate Casing Slab",
+  "block.onilib.deepslate_casing_stairs": "Deepslate Casing Stairs",
+  "block.onilib.deepslate_casing_button": "Deepslate Casing Button",
+  "block.onilib.deepslate_casing_pressure_plate": "Deepslate Casing Pressure Plate",
+  "block.onilib.deepslate_casing_fence": "Deepslate Casing Fence",
+  "block.onilib.deepslate_casing_fence_gate": "Deepslate Casing Fence Gate",
+  "block.onilib.deepslate_casing_wall": "Deepslate Casing Wall",
+  "block.onilib.deepslate_casing_trapdoor": "Deepslate Casing Trapdoor",
+  "block.onilib.deepslate_casing_door": "Deepslate Casing Door",
+  "block.onilib.reconsider_block": "Reconsider.",
+
+  "creativetab.onilib.items": "OniLib Items",
+  "creativetab.onilib.blocks": "OniLib Blocks"
 }

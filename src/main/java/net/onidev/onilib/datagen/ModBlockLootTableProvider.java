@@ -28,7 +28,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         // dropSelf is going to be used in 90% of cases.
-//        dropSelf(ModBlocks.CRUMB_RADIO.get());
 
         // createOreDrop takes one item as the ore block, and one item as the ore item.
 //        add(ModBlocks.CRUMB_ORE.get(),
@@ -38,6 +37,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 //        add(ModBlocks.DEEPSLATE_CRUMB_ORE.get(),
 //                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_CRUMB_ORE.get(), ModItems.RAW_CRUMBIUM.get(), 2, 5));
 
+        dropSelf(ModBlocks.DEEPSLATE_CASING.get());
+        dropSelf(ModBlocks.DEEPSLATE_CASING_STAIRS.get());
+
+        dropSelf(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.DEEPSLATE_CASING_BUTTON.get());
+
+        dropSelf(ModBlocks.DEEPSLATE_CASING_FENCE.get());
+        dropSelf(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get());
+        dropSelf(ModBlocks.DEEPSLATE_CASING_WALL.get());
+
+        dropSelf(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
+
+        dropSelf(ModBlocks.RECONSIDER_BLOCK.get());
+
+        add(ModBlocks.DEEPSLATE_CASING_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.DEEPSLATE_CASING_SLAB.get())
+        );
+
+        add(ModBlocks.DEEPSLATE_CASING_DOOR.get(),
+                block -> createDoorTable(ModBlocks.DEEPSLATE_CASING_DOOR.get())
+        );
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

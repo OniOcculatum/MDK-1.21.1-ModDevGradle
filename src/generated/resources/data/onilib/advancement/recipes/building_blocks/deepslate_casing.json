@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_alloy": {
+      "conditions": {
+        "items": [
+          {
+            "items": "onilib:deepslate_alloy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "onilib:deepslate_casing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate_alloy"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "onilib:deepslate_casing"
+    ]
+  }
+}
