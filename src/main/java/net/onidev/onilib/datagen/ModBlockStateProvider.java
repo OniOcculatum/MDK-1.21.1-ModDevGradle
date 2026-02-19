@@ -14,12 +14,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.BLOCK_OF_CRUMBIUM);
-        blockWithItem(ModBlocks.CRUMB_ANIMATOR);
-        blockWithItem(ModBlocks.CRUMB_ORE);
-        blockWithItem(ModBlocks.CRUMB_RADIO);
-        blockWithItem(ModBlocks.DEEPSLATE_CRUMB_ORE);
-        blockWithItem(ModBlocks.EVIL_CRUMB_RADIO);
+//        blockWithItem(ModBlocks.BLOCK_OF_CRUMBIUM);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

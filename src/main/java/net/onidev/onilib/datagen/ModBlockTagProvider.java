@@ -18,19 +18,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
-        // Use the tag function with BlockTags.<tag> to quickly and easily tag a large number of blocks.
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-                .add(ModBlocks.CRUMB_ORE.get())
-                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
-
-        tag(BlockTags.NEEDS_STONE_TOOL)
-            .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-            .add(ModBlocks.CRUMB_ORE.get());
-
-        tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
+//
+//        // Use the tag function with BlockTags.<tag> to quickly and easily tag a large number of blocks.
+//        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+//                .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
+//                .add(ModBlocks.CRUMB_ORE.get())
+//                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
+//
+//        tag(BlockTags.NEEDS_STONE_TOOL)
+//            .add(ModBlocks.BLOCK_OF_CRUMBIUM.get())
+//            .add(ModBlocks.CRUMB_ORE.get());
+//
+//        tag(BlockTags.NEEDS_IRON_TOOL)
+//                .add(ModBlocks.DEEPSLATE_CRUMB_ORE.get());
 
     }
 }

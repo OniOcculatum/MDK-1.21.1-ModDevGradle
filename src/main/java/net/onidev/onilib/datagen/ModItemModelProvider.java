@@ -14,14 +14,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         // Add items here to give them a simple model, *assuming* a texture exists with the same name.
-        basicItem(ModItems.CRUMB_DRINK.get());
-        basicItem(ModItems.CRUMB_RESHAPER.get());
-        basicItem(ModItems.CRUMB_SNACK.get());
-        basicItem(ModItems.CRUMBIUM.get());
-        basicItem(ModItems.ESSENCE_OF_CRUMB_DOUBTER.get());
         basicItem(ModItems.LAPIS_DUST.get());
-        basicItem(ModItems.LIGHT_OF_CRUMB.get());
-        basicItem(ModItems.RAW_CRUMBIUM.get());
         basicItem(ModItems.SPIDER_EGGS.get());
     }
 }

@@ -17,8 +17,8 @@ public class ModDataMapProvider extends DataMapProvider {
     @Override
     protected void gather() {
         // Add any number of NeoForeDataMaps here.
-        this.builder(NeoForgeDataMaps.FURNACE_FUELS)
-                .add(ModItems.ESSENCE_OF_CRUMB_DOUBTER.getId(), new FurnaceFuel(1200), false)
-                .add(ModItems.LIGHT_OF_CRUMB.getId(), new FurnaceFuel(2400), false);
+//        this.builder(NeoForgeDataMaps.FURNACE_FUELS)
+//                .add(ModItems.ESSENCE_OF_CRUMB_DOUBTER.getId(), new FurnaceFuel(1200), false)
+//                .add(ModItems.LIGHT_OF_CRUMB.getId(), new FurnaceFuel(2400), false);
     }
 }

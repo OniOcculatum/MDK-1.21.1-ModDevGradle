@@ -21,34 +21,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
         // Tagging items for auto-recipes later.
-        List<ItemLike> CRUMB_SMELTABLES = List.of(
-                ModItems.RAW_CRUMBIUM,
-                ModBlocks.CRUMB_ORE,
-                ModBlocks.DEEPSLATE_CRUMB_ORE);
+//        List<ItemLike> CRUMB_SMELTABLES = List.of(
+//                ModItems.RAW_CRUMBIUM,
+//                ModBlocks.CRUMB_ORE,
+//                ModBlocks.DEEPSLATE_CRUMB_ORE);
 
         // An example shaped recipe.
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CRUMBIUM.get())
-                .pattern("BBB")
-                .pattern("BBB")
-                .pattern("BBB")
-                .define('B', ModItems.CRUMBIUM.get())
-                .unlockedBy("has_crumbium", has(ModItems.CRUMBIUM))
-                .save(recipeOutput);
+//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLOCK_OF_CRUMBIUM.get())
+//                .pattern("BBB")
+//                .pattern("BBB")
+//                .pattern("BBB")
+//                .define('B', ModItems.CRUMBIUM.get())
+//                .unlockedBy("has_crumbium", has(ModItems.CRUMBIUM))
+//                .save(recipeOutput);
 
         // An example shapeless recipe.
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 9)
-                .requires(ModBlocks.BLOCK_OF_CRUMBIUM.get())
-                .unlockedBy("has_crumbium_block", has(ModBlocks.BLOCK_OF_CRUMBIUM))
-                .save(recipeOutput);
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 9)
+//                .requires(ModBlocks.BLOCK_OF_CRUMBIUM.get())
+//                .unlockedBy("has_crumbium_block", has(ModBlocks.BLOCK_OF_CRUMBIUM))
+//                .save(recipeOutput);
 
         // An example shapeless custom recipe.
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 18)
-                .requires(ModBlocks.CRUMB_ANIMATOR.get())
-                .unlockedBy("has_crumb_animator", has(ModBlocks.CRUMB_ANIMATOR))
-                .save(recipeOutput, "onilib:crumbium_from_crumb_animator");
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 18)
+//                .requires(ModBlocks.CRUMB_ANIMATOR.get())
+//                .unlockedBy("has_crumb_animator", has(ModBlocks.CRUMB_ANIMATOR))
+//                .save(recipeOutput, "onilib:crumbium_from_crumb_animator");
 
-        oreSmelting(recipeOutput, CRUMB_SMELTABLES, RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 0.25f, 200, "bismuth");
-        oreBlasting(recipeOutput, CRUMB_SMELTABLES, RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 0.25f, 100, "bismuth");
+//        oreSmelting(recipeOutput, CRUMB_SMELTABLES, RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 0.25f, 200, "bismuth");
+//        oreBlasting(recipeOutput, CRUMB_SMELTABLES, RecipeCategory.MISC, ModItems.CRUMBIUM.get(), 0.25f, 100, "bismuth");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

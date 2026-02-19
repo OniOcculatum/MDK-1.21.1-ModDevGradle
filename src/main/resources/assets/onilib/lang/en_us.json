@@ -1,27 +1,5 @@
 {
   "item.onilib.lapis_dust": "Lapis Dust",
-  "item.onilib.spider_eggs": "Spider Eggs",
-  "item.onilib.raw_crumbium": "Raw Crumbium",
-  "item.onilib.crumbium": "Crumbium",
-  "item.onilib.crumb_reshaper": "Crumb Reshaper",
-  "item.onilib.crumb_snack": "Crumb Snack",
-  "item.onilib.crumb_drink": "Crumb Drink",
-  "item.onilib.light_of_crumb": "Light o' Crumb",
-  "item.onilib.essence_of_crumb_doubter": "Essence of Crumb Doubter",
-
-  "block.onilib.crumb_radio": "Crumb Radio",
-  "block.onilib.evil_crumb_radio": "Evil Crumb Radio(?)",
-  "block.onilib.crumb_animator": "Crumb Animator",
-  "block.onilib.crumb_ore": "Crumb Ore",
-  "block.onilib.deepslate_crumb_ore": "Deepslate Crumb Ore",
-  "block.onilib.block_of_crumbium": "Block of Crumbium",
-
-  "creativetab.onilib.items": "Oni Items",
-  "creativetab.onilib.blocks": "Oni Blocks",
-
-  "tooltip.onilib.crumb_animator": "May contain pure Crumb essence.",
-  "tooltip.onilib.crumb_reshaper_no_shift": "Press SHIFT to reveal the secrets of the wawa.",
-  "tooltip.onilib.crumb_reshaper_shift_down": "You have discovered the secrets of the wawa.",
-  "tooltip.onilib.crumb_snack": "A delicious chicken parmesan snack."
+  "item.onilib.spider_eggs": "Spider Eggs"
 
 }

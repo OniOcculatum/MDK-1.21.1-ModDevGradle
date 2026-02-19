@@ -60,11 +60,11 @@ public class OniLib {
             event.accept(ModItems.SPIDER_EGGS);
         }
 
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.CRUMB_RADIO);
-            event.accept(ModBlocks.EVIL_CRUMB_RADIO);
-            event.accept(ModBlocks.CRUMB_ANIMATOR);
-        }
+//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+//            event.accept(ModBlocks.CRUMB_RADIO);
+//            event.accept(ModBlocks.EVIL_CRUMB_RADIO);
+//            event.accept(ModBlocks.CRUMB_ANIMATOR);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "onilib:block/evil_crumb_radio"
-  }
-}

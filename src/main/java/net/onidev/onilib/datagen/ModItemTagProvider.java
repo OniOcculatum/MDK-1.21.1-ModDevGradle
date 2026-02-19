@@ -21,13 +21,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ModTags.Items.CRUMB_FOOD)
-                .add(ModItems.CRUMB_SNACK.get())
-                .add(ModItems.CRUMB_DRINK.get())
-                .add(Items.BREAD);
-
-        tag(ModTags.Items.CRUMB_FOOD)
-            .add(ModItems.ESSENCE_OF_CRUMB_DOUBTER.get())
-            .add(ModItems.LIGHT_OF_CRUMB.get());
+        // tag(<tag>).add(<item>), repeatable
+//        tag(ModTags.Items.CRUMB_FOOD)
+//                .add(ModItems.CRUMB_SNACK.get());
     }
 }

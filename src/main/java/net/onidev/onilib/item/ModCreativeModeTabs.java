@@ -22,27 +22,14 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LAPIS_DUST);
                         output.accept(ModItems.SPIDER_EGGS);
-                        output.accept(ModItems.CRUMB_RESHAPER);
-                        output.accept(ModItems.CRUMB_SNACK);
-                        output.accept(ModItems.CRUMB_DRINK);
-                        output.accept(ModItems.ESSENCE_OF_CRUMB_DOUBTER);
-                        output.accept(ModItems.LIGHT_OF_CRUMB);
-                        output.accept(ModItems.RAW_CRUMBIUM);
-                        output.accept(ModItems.CRUMBIUM);
                     }).build());
 
-    public static final Supplier<CreativeModeTab> BISMUTH_BLOCK_TAB = CREATIVE_MODE_TAB.register("oni_lib_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CRUMB_RADIO))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "oni_lib_items_tab"))
-                    .title(Component.translatable("creativetab.onilib.blocks"))
-                    .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModBlocks.CRUMB_RADIO);
-                        output.accept(ModBlocks.EVIL_CRUMB_RADIO);
-                        output.accept(ModBlocks.CRUMB_ANIMATOR);
-                        output.accept(ModBlocks.CRUMB_ORE);
-                        output.accept(ModBlocks.DEEPSLATE_CRUMB_ORE);
-                        output.accept(ModBlocks.BLOCK_OF_CRUMBIUM);
-                    }).build());
+//    public static final Supplier<CreativeModeTab> BISMUTH_BLOCK_TAB = CREATIVE_MODE_TAB.register("oni_lib_blocks_tab",
+//            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CRUMB_RADIO))
+//                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "oni_lib_items_tab"))
+//                    .title(Component.translatable("creativetab.onilib.blocks"))
+//                    .displayItems((itemDisplayParameters, output) -> {
+//                    }).build());
 
 
     public static void register(IEventBus eventBus) {
