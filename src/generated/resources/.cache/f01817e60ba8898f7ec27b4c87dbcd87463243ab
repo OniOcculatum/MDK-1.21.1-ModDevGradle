@@ -1,5 +1,9 @@
-// 1.21.1	2026-02-18T21:59:06.9951294	Tags for minecraft:block mod id onilib
-7f8114751836dee1f3dc18ca0124ad8b2c33792e data/minecraft/tags/block/fences.json
+// 1.21.1	2026-02-19T20:10:12.8936984	Tags for minecraft:block mod id onilib
+fa043a2bf98c67f02a14a38d6272064ef622db22 data/minecraft/tags/block/fences.json
+c5f0642e5fb160c0a75071c433ab92291490ebb6 data/minecraft/tags/block/fence_gates.json
 f5443f5d43c29cbf43705ceff72e6debed03752b data/minecraft/tags/block/mineable/pickaxe.json
+254b80eeaf26eea23b24d8a6c12a59f7fef8b434 data/minecraft/tags/block/needs_diamond_tool.json
 f5443f5d43c29cbf43705ceff72e6debed03752b data/minecraft/tags/block/needs_iron_tool.json
 f0ff4290535f29610dc44d55ec1fc1fee85695fb data/minecraft/tags/block/walls.json
+570c7d0b6be7b371e179bb4278926c853c2089d7 data/onilib/tags/block/incorrect_for_deepslate_alloy_tool.json
+2775f4b133f3fea74404a15279b2184fb1f99d0e data/onilib/tags/block/needs_deepslate_alloy_tool.json

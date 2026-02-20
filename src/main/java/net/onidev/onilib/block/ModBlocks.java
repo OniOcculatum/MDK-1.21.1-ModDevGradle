@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.onidev.onilib.OniLib;
 //import net.onidev.onilib.block.custom.CrumbAnimatorBlock;
+import net.onidev.onilib.block.custom.LampBlock;
 import net.onidev.onilib.item.ModItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
@@ -13,7 +14,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
-import java.awt.*;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -133,6 +133,17 @@ public class ModBlocks {
                             .strength(0.2f)
                             .sound(SoundType.WOOL)
             ));
+
+    public static final DeferredBlock<Block> DEEPSLATE_LAMP = registerBlock(
+            "deepslate_lamp_block",
+            () -> new LampBlock(
+                    BlockBehaviour.Properties.of()
+                            .strength(2f)
+                            .sound(SoundType.AMETHYST)
+                            .requiresCorrectToolForDrops()
+                            .lightLevel(state -> state.getValue(LampBlock.IS_ON) ? 15 : 0)
+            )
+    );
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

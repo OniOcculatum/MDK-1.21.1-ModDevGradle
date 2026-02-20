@@ -1,9 +1,13 @@
-// 1.21.1	2026-02-18T21:52:59.8995491	Item Models: onilib
+// 1.21.1	2026-02-20T04:25:52.0555327	Item Models: onilib
 33f97365ebea5efb73e1563d736073e976fbb13a assets/onilib/models/item/deepslate_alloy.json
+e52cc1f731dbd87c3f7165ab6606b9ab544b2513 assets/onilib/models/item/deepslate_alloy_hammer.json
+07ad6855a1787aeeacd039918529a6ec2cc3c5bf assets/onilib/models/item/deepslate_alloy_pickaxe.json
 cd7eb174f7ab42139081b94a911a87571d05410f assets/onilib/models/item/deepslate_casing_button.json
 a561f0c5cf93cbe38517d101a204946efbd201a8 assets/onilib/models/item/deepslate_casing_door.json
 d9db34e1a3111ca4156a2fae73c21089be18d574 assets/onilib/models/item/deepslate_casing_fence.json
 af9a85d79225ce1e27c11806e07622a0d6385df6 assets/onilib/models/item/deepslate_casing_wall.json
+7ab4c3fcd608e15f6889b5e87a4f33edf515708f assets/onilib/models/item/deepslate_fence_chisel.json
+b0b8ff07839e28121dc0fede6a39414fb7762efa assets/onilib/models/item/empty_can.json
 b974760bcb8912e888c17fb4db8b11b8fb94c16f assets/onilib/models/item/lapis_dust.json
 4c11f9824d9d00eacdbc9a38ecff4762f2ef9eb1 assets/onilib/models/item/pepsi.json
 29d1862fcbe9c9ffe452c3a85c96673f01a8e5a8 assets/onilib/models/item/spider_eggs.json

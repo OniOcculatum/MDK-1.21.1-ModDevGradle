@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-18T22:09:40.0223104	Block States: onilib
+// 1.21.1	2026-02-19T15:30:17.5097491	Block States: onilib
 a49d1829821b6f7a36f78704c2081600e972cb59 assets/onilib/blockstates/deepslate_casing.json
 1b8e414070e6091b4756579b6a74b405252d28d0 assets/onilib/blockstates/deepslate_casing_button.json
 e71379ea6f46e68e066f98c8063a8a9878a8872d assets/onilib/blockstates/deepslate_casing_door.json
@@ -9,6 +9,7 @@ e71379ea6f46e68e066f98c8063a8a9878a8872d assets/onilib/blockstates/deepslate_cas
 77217aef1edb41defb21a92c12585f11d670d6c6 assets/onilib/blockstates/deepslate_casing_stairs.json
 958af619e6a70922b383d885bc537269c544387a assets/onilib/blockstates/deepslate_casing_trapdoor.json
 16c0be838186d0a25ad45f66eae13b5cc97abda7 assets/onilib/blockstates/deepslate_casing_wall.json
+240b8c34e96a2aa070469886d1f19e29e6ed9ec2 assets/onilib/blockstates/deepslate_lamp_block.json
 57fdaf18fb366a2b164f7f3bec12e42fa1779132 assets/onilib/blockstates/reconsider_block.json
 003c425d8139a24b24da9e9592f7450ac964a2da assets/onilib/models/block/deepslate_casing.json
 270b603812cbb8e7cd2e03a1fa05fcc575fecab2 assets/onilib/models/block/deepslate_casing_button.json
@@ -40,6 +41,8 @@ f5729609949be4c46efbb9f667c5f7045f1a4c02 assets/onilib/models/block/deepslate_ca
 a0acda566ef20334eb017c65935b2011ab5da418 assets/onilib/models/block/deepslate_casing_wall_post.json
 12338b1dd3a518189d0656482d1a3c103cb265ba assets/onilib/models/block/deepslate_casing_wall_side.json
 a573960e2410cdb4f44fd100664e5ff84959687b assets/onilib/models/block/deepslate_casing_wall_side_tall.json
+2d98c152a8331d43e9606f246ee6b05a82a23221 assets/onilib/models/block/deepslate_lamp_off.json
+24c73cfaf623a19a0c27ac6c08416d23bc0c843c assets/onilib/models/block/deepslate_lamp_on.json
 aa1d15531399eff2262f8c2226f46599856f70a4 assets/onilib/models/block/reconsider_block.json
 1f600c081ffcafeae1e046ba8ea14193674109c5 assets/onilib/models/item/deepslate_casing.json
 db48e68c9785925ac764f29330f03802ae93a721 assets/onilib/models/item/deepslate_casing_fence_gate.json
@@ -47,4 +50,5 @@ fb864743c2e46c18b965ff06fcd2249cb558ab4f assets/onilib/models/item/deepslate_cas
 bc21c08a9da28bf73dba5f94857b15997df35fb8 assets/onilib/models/item/deepslate_casing_slab.json
 4fafd8dc63868f6f556a619c092235f4c8934990 assets/onilib/models/item/deepslate_casing_stairs.json
 f9e2dba92253fdd2b3ff30b156a524d8492aabb4 assets/onilib/models/item/deepslate_casing_trapdoor.json
+afcdd6b04e2bf516643364a11cebcb3effad3261 assets/onilib/models/item/deepslate_lamp_block.json
 bca56657b8997c48f7012de606f6bc11c266b520 assets/onilib/models/item/reconsider_block.json

@@ -3,6 +3,7 @@ package net.onidev.onilib;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.onidev.onilib.block.ModBlocks;
+import net.onidev.onilib.component.ModDataComponents;
 import net.onidev.onilib.item.ModCreativeModeTabs;
 import net.onidev.onilib.item.ModItems;
 import org.slf4j.Logger;
@@ -41,6 +42,7 @@ public class OniLib {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModDataComponents.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

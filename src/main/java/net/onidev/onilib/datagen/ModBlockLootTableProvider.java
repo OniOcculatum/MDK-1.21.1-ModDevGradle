@@ -51,6 +51,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.RECONSIDER_BLOCK.get());
 
+        dropSelf(ModBlocks.DEEPSLATE_LAMP.get());
+
         add(ModBlocks.DEEPSLATE_CASING_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DEEPSLATE_CASING_SLAB.get())
         );

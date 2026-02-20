@@ -3,6 +3,9 @@
   "item.onilib.spider_eggs": "Spider Eggs",
   "item.onilib.pepsi": "Pepsi",
   "item.onilib.deepslate_alloy": "Deepslate Alloy",
+  "item.onilib.deepslate_fence_chisel": "Deepslate Fence Chisel",
+  "item.onilib.deepslate_alloy_pickaxe": "Deepslate Alloy Pickaxe",
+  "item.onilib.deepslate_alloy_hammer": "Deepslate Alloy Hammer",
 
   "block.onilib.deepslate_casing": "Deepslate Casing",
   "block.onilib.deepslate_casing_slab": "Deepslate Casing Slab",
@@ -15,6 +18,10 @@
   "block.onilib.deepslate_casing_trapdoor": "Deepslate Casing Trapdoor",
   "block.onilib.deepslate_casing_door": "Deepslate Casing Door",
   "block.onilib.reconsider_block": "Reconsider.",
+  "block.onilib.deepslate_lamp_block": "Deepslate Lamp",
+
+  "tooltip.onilib.deepslate_fence_chisel_inactive": "Hold SHIFT to see more.",
+  "tooltip.onilib.deepslate_fence_chisel_active": "Converts Deepslate Casing Fences to Deepslate Casing Fence Gates, and vice versa.",
 
   "creativetab.onilib.items": "OniLib Items",
   "creativetab.onilib.blocks": "OniLib Blocks"

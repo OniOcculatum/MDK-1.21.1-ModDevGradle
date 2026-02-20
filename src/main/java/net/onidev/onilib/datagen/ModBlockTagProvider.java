@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.onidev.onilib.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -43,12 +44,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_CASING_DOOR.get())
                 .add(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
 
-        tag(BlockTags.FENCES)
-                .add(ModBlocks.DEEPSLATE_CASING_FENCE.get())
-                .add(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get())
-                .add(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.DEEPSLATE_LAMP.get());
 
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get());
         tag(BlockTags.WALLS)
                 .add(ModBlocks.DEEPSLATE_CASING_WALL.get());
+
+        tag(ModTags.Blocks.NEEDS_DEEPSLATE_ALLOY_TOOL)
+                .add(ModBlocks.DEEPSLATE_LAMP.get())
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_DEEPSLATE_ALLOY_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_DEEPSLATE_ALLOY_TOOL);
     }
 }

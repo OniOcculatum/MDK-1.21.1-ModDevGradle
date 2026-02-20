@@ -22,8 +22,12 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.LAPIS_DUST);
                         output.accept(ModItems.SPIDER_EGGS);
-                        output.accept(ModItems.PEPSI);
+//                        output.accept(ModItems.PEPSI);
                         output.accept(ModItems.DEEPSLATE_ALLOY);
+                        output.accept(ModItems.DEEPSLATE_FENCE_CHISEL);
+                        output.accept(ModItems.DEEPSLATE_ALLOY_PICKAXE);
+                        output.accept(ModItems.DEEPSLATE_ALLOY_HAMMER);
+//                        output.accept(ModItems.EMPTY_CAN);
                     }).build());
 
     public static final Supplier<CreativeModeTab> ONI_LIB_BLOCK_TAB = CREATIVE_MODE_TAB.register("oni_lib_blocks_tab",
@@ -46,6 +50,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.DEEPSLATE_CASING_DOOR);
                         output.accept(ModBlocks.DEEPSLATE_CASING_TRAPDOOR);
+
+                        output.accept(ModBlocks.DEEPSLATE_LAMP);
 
                         output.accept(ModBlocks.RECONSIDER_BLOCK);
                     }).build());

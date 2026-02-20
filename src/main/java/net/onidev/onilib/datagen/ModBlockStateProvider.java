@@ -1,5 +1,7 @@
 package net.onidev.onilib.datagen;
 
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.onidev.onilib.OniLib;
 import net.onidev.onilib.block.ModBlocks;
 import net.minecraft.data.PackOutput;
@@ -7,6 +9,7 @@ import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.onidev.onilib.block.custom.LampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -36,6 +39,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE);
         blockItem(ModBlocks.DEEPSLATE_CASING_FENCE_GATE);
         blockItem(ModBlocks.DEEPSLATE_CASING_TRAPDOOR, "_bottom");
+
+        customLamp(ModBlocks.DEEPSLATE_LAMP, "deepslate_lamp_on", "deepslate_lamp_off");
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
@@ -48,5 +53,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("onilib:block/" + deferredBlock.getId().getPath() + appendix));
+    }
+
+    private void customLamp(DeferredBlock<?> deferredBlock, String lampTextureOn, String lampTextureOff) {
+        getVariantBuilder(deferredBlock.get()).forAllStates(state -> {
+            if(state.getValue(LampBlock.IS_ON)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(lampTextureOn,
+                        ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOn)))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(lampTextureOff,
+                        ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOff)))};
+            }
+        });
+
+        simpleBlockItem(deferredBlock.get(), models().cubeAll(lampTextureOn,
+                ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOn)));
     }
 }

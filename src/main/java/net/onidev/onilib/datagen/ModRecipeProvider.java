@@ -1,5 +1,6 @@
 package net.onidev.onilib.datagen;
 
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.fml.common.Mod;
@@ -15,7 +16,6 @@ import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import com.simibubi.create.content.materials.ExperienceNuggetItem;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
@@ -46,6 +46,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Blocks.DEEPSLATE)
                 .unlockedBy("has_deepslate", has(Blocks.DEEPSLATE))
                 .save(recipeOutput, OniLib.MOD_ID + ":deepslate_alloy_from_deepslate");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_ALLOY_PICKAXE.get())
+                .pattern("DDD")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('D', ModItems.DEEPSLATE_ALLOY.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_deepslate_alloy", has(ModItems.DEEPSLATE_ALLOY.get()))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DEEPSLATE_ALLOY_HAMMER.get())
+                .pattern(" DD")
+                .pattern(" DD")
+                .pattern("S  ")
+                .define('D', ModItems.DEEPSLATE_ALLOY.get())
+                .define('S', Items.STICK)
+                .unlockedBy("has_deepslate_alloy", has(ModItems.DEEPSLATE_ALLOY.get()))
+                .save(recipeOutput);
 
         // An example shapeless recipe.
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.DEEPSLATE_ALLOY.get(), 9)

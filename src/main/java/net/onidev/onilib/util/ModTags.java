@@ -10,14 +10,16 @@ import net.onidev.onilib.OniLib;
 
 public class ModTags {
     public static class Blocks {
+        public static final TagKey<Block> NEEDS_DEEPSLATE_ALLOY_TOOL = createTag("needs_deepslate_alloy_tool");
+        public static final TagKey<Block> INCORRECT_FOR_DEEPSLATE_ALLOY_TOOL = createTag("incorrect_for_deepslate_alloy_tool");
+
         private static TagKey<Block> createTag(String name){
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, name));
         }
     }
 
     public static class Items {
-        public static final TagKey<Item> CRUMB_FOOD = createTag("crumb_food");
-        public static final TagKey<Item> CRUMB_FUEL = createTag("crumb_fuel");
+        public static final TagKey<Item> DEEPSLATE_ALLOY_TOOL = createTag("deepslate_alloy_tool");
 
         private static TagKey<Item> createTag(String name){
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, name));

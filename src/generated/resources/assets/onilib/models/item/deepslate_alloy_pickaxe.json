@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "onilib:item/deepslate_alloy_pickaxe"
+  }
+}

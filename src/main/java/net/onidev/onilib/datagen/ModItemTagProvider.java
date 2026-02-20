@@ -1,5 +1,6 @@
 package net.onidev.onilib.datagen;
 
+import net.minecraft.tags.ItemTags;
 import net.onidev.onilib.OniLib;
 import net.onidev.onilib.item.ModItems;
 import net.onidev.onilib.util.ModTags;
@@ -21,8 +22,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        // tag(<tag>).add(<item>), repeatable
-//        tag(ModTags.Items.CRUMB_FOOD)
-//                .add(ModItems.CRUMB_SNACK.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.DEEPSLATE_ALLOY_PICKAXE.get());
     }
 }

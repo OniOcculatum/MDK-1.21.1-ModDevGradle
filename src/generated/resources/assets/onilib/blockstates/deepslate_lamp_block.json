@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "onilib:block/deepslate_lamp_off"
+    },
+    "clicked=true": {
+      "model": "onilib:block/deepslate_lamp_on"
+    }
+  }
+}

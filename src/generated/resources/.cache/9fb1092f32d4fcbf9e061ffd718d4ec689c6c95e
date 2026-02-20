@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-18T21:52:59.8995491	Recipes
+// 1.21.1	2026-02-19T23:07:36.9239516	Recipes
 db21fb6a723530eb00a2c7efc2af5939f7f08719 data/onilib/advancement/recipes/building_blocks/deepslate_casing.json
 ef41f5cc459385a38af4f9dd37c4deda2e85ba37 data/onilib/advancement/recipes/building_blocks/deepslate_casing_stairs.json
 f47ac7862f200c402e6e1c8557cd6bdc2e45c28d data/onilib/advancement/recipes/building_blocks/deepslate_casing_wall.json
@@ -12,8 +12,12 @@ e30219660d6efdadcfb0d17133c2364be0901335 data/onilib/advancement/recipes/misc/de
 474507297f4f91796e7818b077657669144646d6 data/onilib/advancement/recipes/redstone/deepslate_casing_fence_gate.json
 c6b19a51c2b56fd50be7073860f1aea06b91a435 data/onilib/advancement/recipes/redstone/deepslate_casing_pressure_plate.json
 34416571b71a18dc17e0ee714b723eab60e7b5d0 data/onilib/advancement/recipes/redstone/deepslate_casing_trapdoor.json
+2621aa0baa3ed43c3dd6fd2901ff73948ff9d898 data/onilib/advancement/recipes/tools/deepslate_alloy_hammer.json
+cbe9c7e6d69d990b293adac713a4a9ce5b892e89 data/onilib/advancement/recipes/tools/deepslate_alloy_pickaxe.json
 64757245baf1aa947a7b8ffd1ae6022df1ec0d09 data/onilib/recipe/deepslate_alloy_from_deepslate.json
 99463e36b8d6a2149c7d7683ae328f2a79b8749b data/onilib/recipe/deepslate_alloy_from_deepslate_casing.json
+36c6c7364f12ad531d727efd2049754af344de58 data/onilib/recipe/deepslate_alloy_hammer.json
+6762585eaa546a2e8057a90bce8ea205dadc0b1c data/onilib/recipe/deepslate_alloy_pickaxe.json
 845ffd59f97fbc0dd3fbc76e8a00085aed81c153 data/onilib/recipe/deepslate_casing.json
 5ab16ac0cc167d6bf5ef2eb33dfab8b85ba576a2 data/onilib/recipe/deepslate_casing_button.json
 28a08a1edec1c02f29bf10c44454ba86fe020095 data/onilib/recipe/deepslate_casing_door.json

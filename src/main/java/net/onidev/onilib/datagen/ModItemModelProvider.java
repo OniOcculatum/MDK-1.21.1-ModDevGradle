@@ -2,7 +2,9 @@ package net.onidev.onilib.datagen;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.onidev.onilib.OniLib;
 import net.onidev.onilib.block.ModBlocks;
 import net.onidev.onilib.item.ModItems;
@@ -22,12 +24,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SPIDER_EGGS.get());
         basicItem(ModItems.PEPSI.get());
         basicItem(ModItems.DEEPSLATE_ALLOY.get());
+        basicItem(ModItems.DEEPSLATE_FENCE_CHISEL.get());
+        basicItem(ModBlocks.DEEPSLATE_CASING_DOOR.asItem());
+        basicItem(ModItems.EMPTY_CAN.get());
 
         buttonItem(ModBlocks.DEEPSLATE_CASING_BUTTON, ModBlocks.DEEPSLATE_CASING);
         fenceItem(ModBlocks.DEEPSLATE_CASING_FENCE, ModBlocks.DEEPSLATE_CASING);
         wallItem(ModBlocks.DEEPSLATE_CASING_WALL, ModBlocks.DEEPSLATE_CASING);
 
-        basicItem(ModBlocks.DEEPSLATE_CASING_DOOR.asItem());
+        handheldItem(ModItems.DEEPSLATE_ALLOY_PICKAXE);
+        handheldItem(ModItems.DEEPSLATE_ALLOY_HAMMER);
     }
 
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
@@ -46,5 +52,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID,
                         "block/" + baseBlock.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(DeferredItem<?> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
