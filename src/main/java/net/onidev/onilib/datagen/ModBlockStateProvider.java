@@ -1,0 +1,107 @@
+package net.onidev.onilib.datagen;
+
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import net.onidev.onilib.OniLib;
+import net.onidev.onilib.block.ModBlocks;
+import net.minecraft.data.PackOutput;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.onidev.onilib.block.custom.LampBlock;
+
+public class ModBlockStateProvider extends BlockStateProvider {
+    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, OniLib.MOD_ID, exFileHelper);
+    }
+
+    @Override
+    protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.DEEPSLATE_CASING);
+        blockWithItem(ModBlocks.RECONSIDER_BLOCK);
+
+        stairsBlock(ModBlocks.DEEPSLATE_CASING_STAIRS.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+        slabBlock(ModBlocks.DEEPSLATE_CASING_SLAB.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+
+        buttonBlock(ModBlocks.DEEPSLATE_CASING_BUTTON.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+        pressurePlateBlock(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+
+        fenceBlock(ModBlocks.DEEPSLATE_CASING_FENCE.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+        fenceGateBlock(ModBlocks.DEEPSLATE_CASING_FENCE_GATE.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+        wallBlock(ModBlocks.DEEPSLATE_CASING_WALL.get(), blockTexture(ModBlocks.DEEPSLATE_CASING.get()));
+
+        doorBlockWithRenderType(ModBlocks.DEEPSLATE_CASING_DOOR.get(), modLoc("block/deepslate_casing_door_bottom"), modLoc("block/deepslate_casing_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.DEEPSLATE_CASING_TRAPDOOR.get(), modLoc("block/deepslate_casing_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.DEEPSLATE_CASING_STAIRS);
+        blockItem(ModBlocks.DEEPSLATE_CASING_SLAB);
+        blockItem(ModBlocks.DEEPSLATE_CASING_PRESSURE_PLATE);
+        blockItem(ModBlocks.DEEPSLATE_CASING_FENCE_GATE);
+        blockItem(ModBlocks.DEEPSLATE_CASING_TRAPDOOR, "_bottom");
+
+        customLamp(ModBlocks.DEEPSLATE_LAMP, "deepslate_lamp_on", "deepslate_lamp_off");
+    }
+
+    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    }
+
+    private void horizontalRotatableBlock(DeferredBlock<?> deferredBlock) {
+        String name = deferredBlock.getId().getPath();
+
+        // 1. Build the base model (remember: the 'north' texture is the "front")
+        ModelFile model = models().cube(name,
+                modLoc("block/" + name + "/" + name + "_bottom"),
+                modLoc("block/" + name + "/" + name + "_top"),
+                modLoc("block/" + name + "/" + name + "_north"),
+                modLoc("block/" + name + "/" + name + "_south"),
+                modLoc("block/" + name + "/" + name + "_east"),
+                modLoc("block/" + name + "/" + name + "_west")
+        ).texture("particle", modLoc("block/" + name + "/" + name + "_north"));
+
+        horizontalBlock(deferredBlock.get(), model);
+
+        simpleBlockItem(deferredBlock.get(), model);
+    }
+
+    private void omniRotatableBlock(DeferredBlock<?> deferredBlock) {
+        String name = deferredBlock.getId().getPath();
+
+        ModelFile model = models().cube(name,
+                modLoc("block/" + name + "/" + name + "_bottom"),
+                modLoc("block/" + name + "/" + name + "_top"),
+                modLoc("block/" + name + "/" + name + "_north"),
+                modLoc("block/" + name + "/" + name + "_south"),
+                modLoc("block/" + name + "/" + name + "_east"),
+                modLoc("block/" + name + "/" + name + "_west")
+        ).texture("particle", modLoc("block/" + name + "/" + name + "_north"));
+
+        directionalBlock(deferredBlock.get(), model);
+
+        simpleBlockItem(deferredBlock.get(), model);
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("onilib:block/" + deferredBlock.getId().getPath()));
+    }
+
+    private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("onilib:block/" + deferredBlock.getId().getPath() + appendix));
+    }
+
+    private void customLamp(DeferredBlock<?> deferredBlock, String lampTextureOn, String lampTextureOff) {
+        getVariantBuilder(deferredBlock.get()).forAllStates(state -> {
+            if(state.getValue(LampBlock.IS_ON)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(lampTextureOn,
+                        ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOn)))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(lampTextureOff,
+                        ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOff)))};
+            }
+        });
+
+        simpleBlockItem(deferredBlock.get(), models().cubeAll(lampTextureOn,
+                ResourceLocation.fromNamespaceAndPath(OniLib.MOD_ID, "block/" + lampTextureOn)));
+    }
+}
