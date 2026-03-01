@@ -1,77 +1,31 @@
 package net.onidev.onilib;
 
+import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.util.nullness.NonNullSupplier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.onidev.onilib.block.ModBlocks;
-import net.onidev.onilib.component.ModDataComponents;
-import net.onidev.onilib.item.ModCreativeModeTabs;
-import net.onidev.onilib.item.ModItems;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
+import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.onidev.onilib.block.ModBlocks;
+//import net.onidev.onilib.item.ModItems;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(OniLib.MOD_ID)
 public class OniLib {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "onilib";
+    public static final NonNullSupplier<Registrate> REGISTRATE = NonNullSupplier.lazy(() -> Registrate.create(MOD_ID));
 
-    // Directly reference a slf4j logger
-    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final ResourceKey<CreativeModeTab> ITEMS_TAB_KEY = ResourceKey.create(Registries.CREATIVE_MODE_TAB,
+            ResourceLocation.fromNamespaceAndPath(MOD_ID, "items_tab"));
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public OniLib(IEventBus modEventBus, ModContainer modContainer) {
-        modEventBus.addListener(this::commonSetup);
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (OniLib) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
-        NeoForge.EVENT_BUS.register(this);
+    // The "Safety Catch"
+    private static boolean hasRegistered = false;
 
-        ModCreativeModeTabs.register(modEventBus);
-
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-        ModDataComponents.register(modEventBus);
-
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-    }
-
-    private void commonSetup(FMLCommonSetupEvent event) {
-
-    }
-
-    // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.LAPIS_DUST);
-            event.accept(ModItems.SPIDER_EGGS);
-        }
-
-//        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-//            event.accept(ModBlocks.CRUMB_RADIO);
-//            event.accept(ModBlocks.EVIL_CRUMB_RADIO);
-//            event.accept(ModBlocks.CRUMB_ANIMATOR);
-//        }
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
+    public OniLib(IEventBus modEventBus) {
+//        ModItems.load();
+        ModBlocks.load();
     }
 }

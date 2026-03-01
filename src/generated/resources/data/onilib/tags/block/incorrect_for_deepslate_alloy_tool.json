@@ -1,8 +1,0 @@
-{
-  "remove": [
-    "#onilib:needs_deepslate_alloy_tool"
-  ],
-  "values": [
-    "#minecraft:incorrect_for_iron_tool"
-  ]
-}

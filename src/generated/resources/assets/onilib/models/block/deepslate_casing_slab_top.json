@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "onilib:block/deepslate_casing",
-    "side": "onilib:block/deepslate_casing",
-    "top": "onilib:block/deepslate_casing"
-  }
-}

@@ -1,0 +1,7 @@
+// 1.21.1	2026-03-01T05:53:14.5571515	Registrate Provider for onilib [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (enchantments), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+a49d1829821b6f7a36f78704c2081600e972cb59 assets/onilib/blockstates/deepslate_casing.json
+1f3df4f76873eabbd181cc320b66af28eccab6c7 assets/onilib/lang/en_ud.json
+5c4d99da03daed1fbf7460455e0f5a4b3883be64 assets/onilib/lang/en_us.json
+003c425d8139a24b24da9e9592f7450ac964a2da assets/onilib/models/block/deepslate_casing.json
+1f600c081ffcafeae1e046ba8ea14193674109c5 assets/onilib/models/item/deepslate_casing.json
+2e1a4c831acb0377789e0be3dc79699701c5b5df data/onilib/loot_table/blocks/deepslate_casing.json
